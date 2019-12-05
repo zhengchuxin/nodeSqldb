@@ -1,0 +1,2 @@
+[2019-12-02T11:48:52.382] [INFO] cheese - [Object: null prototype] { username: 'zcx', password: '123456' }
+[2019-12-02T11:48:52.389] [INFO] cheese - Response { isSuc: true, msg: '登陆成功', code: 1, result: undefined }
