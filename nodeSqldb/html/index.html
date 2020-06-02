@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<body>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1,minimum-scale=1,maximum-scale=1, user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple -mobile-web-app-status-bar-style" content="black">
+        <meta name="format-de tection" content="telephone=no">
+        <meta name="applicable-device" content="mobile">
+        <title>Node与Mysql
+        </title>
+        <meta name="Keywords" content="">
+        <meta name="Description" content="">
+        <script type="text/javascript" src="../jquery/jquery.min.js "></script>
+        <script type="text/javascript" src="../api/url.js"></script>
+
+        <script>
+
+            // 注册
+            // $.ajax({
+            //     type: 'post',
+            //     dataType: 'JSON',
+            //     contentType: 'application/json',
+            //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            //     data: {
+            //         "username": 'zcx1',
+            //         "password": '666666',
+            //         "phone": "1378889488",
+            //     },
+            //     url: dataUserUrl + '/register',
+            //     success: function (data) {
+            //         alert('注册' + JSON.stringify(data));
+            //     },
+            //     error: function () {
+            //         console.log('errorxxxxxx');
+            //     }
+            // })
+
+
+            // 登录
+            $.ajax({
+                type: 'post',
+                dataType: 'JSON',
+                contentType: 'application/json',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                data: {
+                    "username": 'zcx',
+                    "password": '666666',
+                },
+                url: dataUserUrl + '/login',
+                success: function (data) {
+                    alert(JSON.stringify(data));
+                },
+                error: function () {
+                    console.log('errorxxxxxx');
+                }
+            })
+
+
+            // 发布商品
+            // $.ajax({
+            //     type: 'post',
+            //     dataType: 'JSON',
+            //     contentType: 'application/json',
+            //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            //     data: {
+            //         "productName": '微波炉',
+            //         "productType": '2',
+            //         "productPrice": 98,
+            //         "productImg": 'https://ss0.bdstatic.com/',
+            //         "productDes": '美丽好用的的微波炉',
+            //     },
+            //     url: dataUserUrl + '/addProduct',
+            //     // url: 'http://localhost:3000/',
+            //     success: function (data) {
+            //         console.log('发布商品' + JSON.stringify(data));
+            //     },
+            //     error: function () {
+            //         console.log('errorxxxxxx');
+            //     }
+            // })
+
+
+            // 商品列表
+            // $.ajax({
+            //     type: 'post',
+            //     dataType: 'JSON',
+            //     contentType: 'application/json',
+            //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            //     data: {
+            //     },
+            //     url: dataUserUrl + '/getProductList',
+            //     // url: 'http://localhost:3000/',
+            //     success: function (data) {
+            //         alert('商品列表' + JSON.stringify(data));
+            //     },
+            //     error: function () {
+            //         console.log('errorxxxxxx');
+            //     }
+            // })
+
+            // 更新商品
+            // $.ajax({
+            //     type: 'post',
+            //     dataType: 'JSON',
+            //     contentType: 'application/json',
+            //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            //     data: {
+            //         "productId": 1,
+            //         "product_name": '大炮飞机一起',
+            //         "product_type": '1',
+            //         "product_price": 9.9,
+            //         "product_img": 'https',
+            //         "product_des": '好用的汽车大炮',
+            //     },
+            //     url: dataUserUrl + '/updateProduct',
+            //     // url: 'http://localhost:3000/',
+            //     success: function (data) {
+            //         alert('修改商品' + JSON.stringify(data));
+            //     },
+            //     error: function () {
+            //         console.log('errorxxxxxx');
+            //     }
+            // })
+
+
+            // 删除商品
+            // $.ajax({
+            //     type: 'post',
+            //     dataType: 'JSON',
+            //     contentType: 'application/json',
+            //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            //     data: {
+            //         "pid": 1,
+            //     },
+            //     url: dataUserUrl + '/deleteProduct',
+            //     // url: 'http://localhost:3000/',
+            //     success: function (data) {
+            //         alert('删除商品' + JSON.stringify(data));
+            //     },
+            //     error: function () {
+            //         console.log('errorxxxxxx');
+            //     }
+            // })
+
+            // 模糊查询商品
+            // $.ajax({
+            //     type: 'post',
+            //     dataType: 'JSON',
+            //     contentType: 'application/json',
+            //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            //     data: {
+            //         "productName": '微',
+            //     },
+            //     url: dataUserUrl + '/getListByKey',
+            //     success: function (data) {
+            //         alert('模糊商品' + JSON.stringify(data));
+            //     },
+            //     error: function () {
+            //         console.log('errorxxxxxx');
+            //     }
+            // })
+
+            // 条件查询商品
+            // $.ajax({
+            //     type: 'post',
+            //     dataType: 'JSON',
+            //     contentType: 'application/json',
+            //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            //     data: {
+            //         // "productId": '2',
+            //         "productType": '2',
+            //         "productName": '手机'
+            //     },
+            //     url: dataUserUrl + '/getListByCondition',
+            //     // url: 'http://localhost:3000/',
+            //     success: function (data) {
+            //         alert('条件查询商品成功' + JSON.stringify(data));
+            //     },
+            //     error: function () {
+            //         console.log('errorxxxxxx');
+            //     }
+            // })
+
+        </script>
+    </head>
+</body>
+
+</html>
